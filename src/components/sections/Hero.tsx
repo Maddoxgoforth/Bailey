@@ -58,27 +58,27 @@ export default function Hero() {
           <p className="max-w-md text-lg text-muted">
             Every recipe Bailey personally cooks and swears by, plus a seat
             in the community where you can chat with Bailey one-on-one
-            every single week. All for $5.
+            every single week. All for $10.
           </p>
         </Reveal>
 
         <Reveal delayMs={260} className="w-full">
           <VideoSlot
             label="VSL — Bailey's Recipe Club"
-            spec="60–120 sec video: who Bailey is, what's inside (100+ recipes + weekly 1:1 access), and why it's $5. Landscape 16:9. Not yet recorded."
+            spec="60–120 sec video: who Bailey is, what's inside (100+ recipes + weekly 1:1 access), and why it's $10. Landscape 16:9. Not yet recorded."
           />
         </Reveal>
 
         <Reveal delayMs={320} className="flex flex-col items-center gap-2">
           <p className="font-display animate-pop-bounce text-4xl font-bold text-accent">
-            $5
+            $10
           </p>
           <p className="text-sm text-muted">One payment. Instant access.</p>
         </Reveal>
 
         <Reveal delayMs={380} className="w-full">
           <CtaButton
-            label="GET INSTANT ACCESS — $5"
+            label="GET INSTANT ACCESS — $10"
             subtext="100+ recipes + weekly access to Bailey"
           />
         </Reveal>

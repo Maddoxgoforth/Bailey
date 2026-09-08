@@ -36,7 +36,7 @@ export default function About() {
 
         <Reveal delayMs={160} className="w-full">
           <CtaButton
-            label="LEARN DIRECTLY FROM BAILEY — $5"
+            label="LEARN DIRECTLY FROM BAILEY — $10"
             subtext="Get the recipes, and the person behind them."
           />
         </Reveal>

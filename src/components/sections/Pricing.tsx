@@ -24,7 +24,7 @@ export default function Pricing() {
             eyebrow="Get Started"
             title={
               <>
-                Everything Above, For <Highlight tone="pink">$5</Highlight>
+                Everything Above, For <Highlight tone="pink">$10</Highlight>
               </>
             }
             subtitle="Less than a coffee. Way more useful than one."
@@ -52,7 +52,7 @@ export default function Pricing() {
           delayMs={180}
           className="animate-pop-bounce flex flex-col items-center gap-1"
         >
-          <p className="font-display text-4xl font-bold text-accent">$5</p>
+          <p className="font-display text-4xl font-bold text-accent">$10</p>
           <p className="text-sm text-muted">
             One-time payment. Instant access.
           </p>
@@ -61,7 +61,7 @@ export default function Pricing() {
         <Reveal className="w-full" delayMs={240}>
           <CheckoutSlot
             label="Checkout — Whop"
-            spec="Real Whop checkout embed goes here once the $5 product exists on Whop. Needs the Whop checkout/embed URL for that product."
+            spec="Real Whop checkout embed goes here once the $10 product exists on Whop. Needs the Whop checkout/embed URL for that product."
           />
         </Reveal>
       </Container>

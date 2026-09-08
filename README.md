@@ -1,6 +1,6 @@
 # Bailey's Recipe Club
 
-A single-page landing site for Bailey's $5 recipe offer: 100+ of Bailey's
+A single-page landing site for Bailey's $10 recipe offer: 100+ of Bailey's
 personal recipes plus weekly, direct access to chat with Bailey. Built with
 Next.js (App Router), React, TypeScript, and Tailwind CSS v4.
 
@@ -15,7 +15,7 @@ labeled placeholder with the exact spec of what's needed:
 - **`ImageSlot`** — stands in for a headshot or community screenshot. Pass
   `src` (a path under `public/images/`) once the file exists.
 - **`CheckoutSlot`** — stands in for the Whop checkout widget. Pass
-  `embedUrl` once the $5 product exists on Whop.
+  `embedUrl` once the $10 product exists on Whop.
 
 Swapping a placeholder for the real thing is a one-line prop change at the
 call site in the relevant section component (`src/components/sections/`).

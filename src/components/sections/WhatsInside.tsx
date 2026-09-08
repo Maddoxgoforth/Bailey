@@ -46,7 +46,7 @@ export default function WhatsInside() {
 
         <Reveal className="w-full" delayMs={180}>
           <CtaButton
-            label="JOIN THE CLUB — $5"
+            label="JOIN THE CLUB — $10"
             subtext="Everything above, unlocked today."
             tone="purple"
           />

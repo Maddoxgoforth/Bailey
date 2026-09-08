@@ -1,5 +1,5 @@
 /**
- * Stands in for the real Whop checkout widget until the $5 product exists
+ * Stands in for the real Whop checkout widget until the $10 product exists
  * on Whop. Pass `embedUrl` (the Whop checkout embed URL) once it does, and
  * this renders it inline instead of the placeholder. Always keeps
  * id="checkout" so every buy-CTA's `href="#checkout"` anchor keeps working.
