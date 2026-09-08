@@ -3,9 +3,10 @@
 import { ReactNode, useEffect, useRef, useState } from "react";
 
 /**
- * Fades and slides children into place the first time they scroll into
- * view. Purely presentational — no layout impact once visible, and it
- * settles to its final state even if IntersectionObserver never fires.
+ * Pops children into place (fade + rise + slight overshoot scale) the
+ * first time they scroll into view. Purely presentational — no layout
+ * impact once visible, and it settles to its final state even if
+ * IntersectionObserver never fires.
  */
 export default function Reveal({
   children,
@@ -40,9 +41,14 @@ export default function Reveal({
   return (
     <div
       ref={ref}
-      style={{ transitionDelay: `${delayMs}ms` }}
-      className={`transition-all duration-700 ease-out ${
-        visible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
+      style={{
+        transitionDelay: `${delayMs}ms`,
+        transitionTimingFunction: "cubic-bezier(0.34, 1.56, 0.64, 1)",
+      }}
+      className={`transition-all duration-700 ${
+        visible
+          ? "translate-y-0 scale-100 opacity-100"
+          : "translate-y-6 scale-95 opacity-0"
       } ${className}`}
     >
       {children}

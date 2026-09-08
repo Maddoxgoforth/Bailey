@@ -2,7 +2,10 @@ import Container from "@/components/ui/Container";
 import Card from "@/components/ui/Card";
 import SectionHeading from "@/components/ui/SectionHeading";
 import ImageSlot from "@/components/ui/ImageSlot";
+import Highlight from "@/components/ui/Highlight";
 import Reveal from "@/components/ui/Reveal";
+
+const ROTATIONS = ["left", "right", "left"] as const;
 
 const TOUCHPOINTS = [
   {
@@ -28,7 +31,7 @@ export default function Community() {
             eyebrow="Direct Access"
             title={
               <>
-                Talk To <span className="text-accent">Bailey</span>. Every
+                Talk To <Highlight tone="purple">Bailey</Highlight>. Every
                 Single Week.
               </>
             }
@@ -44,11 +47,16 @@ export default function Community() {
           />
         </Reveal>
 
-        <div className="flex w-full flex-col gap-4">
+        <div className="flex w-full flex-col gap-5">
           {TOUCHPOINTS.map((point, i) => (
             <Reveal key={point.title} delayMs={140 + i * 80}>
-              <Card className="text-left transition-transform duration-300 hover:-translate-y-1">
-                <p className="font-bold text-accent">{point.title}</p>
+              <Card
+                className="text-left"
+                rotate={ROTATIONS[i % ROTATIONS.length]}
+              >
+                <p className="font-display font-bold text-accent">
+                  {point.title}
+                </p>
                 <p className="mt-1 text-sm text-muted">{point.body}</p>
               </Card>
             </Reveal>

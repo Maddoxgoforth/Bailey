@@ -1,13 +1,14 @@
 import Container from "@/components/ui/Container";
 import ImageSlot from "@/components/ui/ImageSlot";
 import CtaButton from "@/components/ui/CtaButton";
+import Highlight from "@/components/ui/Highlight";
 import Reveal from "@/components/ui/Reveal";
 
 export default function About() {
   return (
     <section className="py-16">
       <Container className="flex flex-col items-center gap-8 text-center">
-        <Reveal>
+        <Reveal className="animate-wiggle">
           <div className="h-36 w-36">
             <ImageSlot
               label="Bailey Headshot"
@@ -19,11 +20,11 @@ export default function About() {
         </Reveal>
 
         <Reveal delayMs={80} className="flex flex-col items-center gap-3">
-          <p className="text-sm font-bold uppercase tracking-widest text-accent">
+          <p className="text-sm font-extrabold tracking-widest text-accent-3 uppercase">
             Why Listen To Bailey
           </p>
-          <h2 className="text-3xl font-extrabold sm:text-4xl">
-            MEET <span className="text-accent">BAILEY</span>
+          <h2 className="font-display text-3xl font-bold sm:text-4xl">
+            MEET <Highlight tone="yellow">BAILEY</Highlight>
           </h2>
           <p className="max-w-md text-muted">
             Bailey has spent years building a recipe box that&apos;s simple

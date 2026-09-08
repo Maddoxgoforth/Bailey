@@ -12,11 +12,11 @@ export default function SectionHeading({
   return (
     <div className="flex flex-col items-center gap-3 text-center">
       {eyebrow ? (
-        <p className="text-sm font-bold uppercase tracking-widest text-accent">
+        <p className="text-sm font-extrabold tracking-widest text-accent-3 uppercase">
           {eyebrow}
         </p>
       ) : null}
-      <h2 className="text-3xl font-extrabold leading-tight sm:text-4xl">
+      <h2 className="font-display text-3xl leading-tight font-bold sm:text-4xl">
         {title}
       </h2>
       {subtitle ? (

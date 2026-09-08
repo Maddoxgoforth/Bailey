@@ -1,9 +1,22 @@
 import { ReactNode } from "react";
 
-export default function Pill({ children }: { children: ReactNode }) {
+const TONES = {
+  pink: "bg-accent text-white",
+  yellow: "bg-accent-2 text-ink",
+  purple: "bg-accent-3 text-white",
+} as const;
+
+export default function Pill({
+  children,
+  tone = "yellow",
+}: {
+  children: ReactNode;
+  tone?: keyof typeof TONES;
+}) {
   return (
-    <span className="inline-flex items-center gap-2 rounded-full border border-border bg-background-elevated px-4 py-2 text-sm font-semibold text-foreground">
-      <span className="h-2 w-2 shrink-0 rounded-full bg-accent" />
+    <span
+      className={`inline-flex rotate-[-2deg] items-center gap-2 rounded-full border-[3px] border-ink px-4 py-1.5 text-sm font-bold shadow-pop-sm ${TONES[tone]}`}
+    >
       {children}
     </span>
   );

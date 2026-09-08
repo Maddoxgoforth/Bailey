@@ -4,6 +4,9 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import CtaButton from "@/components/ui/CtaButton";
 import Reveal from "@/components/ui/Reveal";
 
+const BULLET_TONES = ["bg-accent", "bg-accent-2", "bg-accent-3"] as const;
+const BULLET_TEXT = ["text-white", "text-ink", "text-white"] as const;
+
 const INCLUDES = [
   "100+ of Bailey's personal recipes — the exact ones Bailey actually cooks, written out step by step",
   "New recipes added regularly, so the collection keeps growing after you join",
@@ -25,11 +28,13 @@ export default function WhatsInside() {
         </Reveal>
 
         <Reveal className="w-full" delayMs={100}>
-          <Card className="w-full text-left transition-transform duration-300 hover:-translate-y-1">
+          <Card className="w-full text-left">
             <ul className="flex flex-col gap-4">
               {INCLUDES.map((item, i) => (
                 <li key={i} className="flex gap-3">
-                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent text-xs font-bold text-white">
+                  <span
+                    className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full border-2 border-ink text-xs font-bold ${BULLET_TONES[i % BULLET_TONES.length]} ${BULLET_TEXT[i % BULLET_TEXT.length]}`}
+                  >
                     {i + 1}
                   </span>
                   <span className="text-muted">{item}</span>
@@ -43,6 +48,7 @@ export default function WhatsInside() {
           <CtaButton
             label="JOIN THE CLUB — $5"
             subtext="Everything above, unlocked today."
+            tone="purple"
           />
         </Reveal>
       </Container>
