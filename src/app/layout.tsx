@@ -14,9 +14,9 @@ const fredoka = Fredoka({
 });
 
 export const metadata: Metadata = {
-  title: "Bailey's Recipe Club — 100+ Recipes + Weekly Access To Bailey",
+  title: "Bailey's Inner Circle — Weekly Access To Bailey + 100+ Recipes",
   description:
-    "Get 100+ of Bailey's personal recipes plus direct, weekly access to Bailey — all for $10.",
+    "Chat with Bailey directly, every week, about anything — plus get 100+ of her personal recipes. All for $5/month.",
 };
 
 export default function RootLayout({

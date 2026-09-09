@@ -41,7 +41,7 @@ export default function CtaButton({
         </span>
       </a>
       <p className="text-center text-sm font-bold text-accent-3">
-        Just $10. Cancel the takeout order instead. 🍟
+        Just $5/month. Cancel the takeout order instead. 🍟
       </p>
     </div>
   );

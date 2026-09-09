@@ -1,18 +1,33 @@
+import WhopCheckout from "./WhopCheckout";
+
 /**
- * Stands in for the real Whop checkout widget until the $10 product exists
- * on Whop. Pass `embedUrl` (the Whop checkout embed URL) once it does, and
- * this renders it inline instead of the placeholder. Always keeps
- * id="checkout" so every buy-CTA's `href="#checkout"` anchor keeps working.
+ * Renders the real Whop checkout once a `planId` is set — that's the only
+ * case wired up on the live site right now. `embedUrl` (a plain iframe) and
+ * the placeholder box remain as fallbacks for other checkout setups. Always
+ * keeps id="checkout" so every buy-CTA's `href="#checkout"` anchor works.
  */
 export default function CheckoutSlot({
-  label,
-  spec,
+  label = "Checkout",
+  spec = "Checkout widget.",
   embedUrl,
+  planId,
 }: {
-  label: string;
-  spec: string;
+  label?: string;
+  spec?: string;
   embedUrl?: string;
+  planId?: string;
 }) {
+  if (planId) {
+    return (
+      <div
+        id="checkout"
+        className="w-full scroll-mt-24 rounded-2xl border-[3px] border-ink bg-background-elevated p-4 shadow-pop"
+      >
+        <WhopCheckout planId={planId} />
+      </div>
+    );
+  }
+
   if (embedUrl) {
     return (
       <div

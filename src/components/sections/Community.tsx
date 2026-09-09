@@ -10,15 +10,15 @@ const ROTATIONS = ["left", "right", "left"] as const;
 const TOUCHPOINTS = [
   {
     title: "Weekly live session with Bailey",
-    body: "Show up, ask anything — a recipe that flopped, a swap for an ingredient you don't have, what to make with what's already in your fridge.",
+    body: "Show up and talk to her about literally anything — your week, what she's up to, a recipe question if you've got one. No set topic.",
   },
   {
     title: "Direct message access",
     body: "Post in the community and get a real reply from Bailey, not a bot or a template.",
   },
   {
-    title: "A community of people actually cooking",
-    body: "See what other members made this week, steal their tweaks, and share your own.",
+    title: "A community of people who just get it",
+    body: "Hang out with other members, see what everyone's talking about, and share your own.",
   },
 ];
 
@@ -35,14 +35,14 @@ export default function Community() {
                 Single Week.
               </>
             }
-            subtitle="Not a course you buy and forget. A running conversation."
+            subtitle="Not a course you buy and forget. A running conversation, about whatever you want."
           />
         </Reveal>
 
         <Reveal className="w-full" delayMs={100}>
           <ImageSlot
             label="Community / Chat Screenshot"
-            spec="Screenshot of the Whop community feed or a chat exchange with Bailey answering a member's cooking question."
+            spec="Screenshot of the Whop community feed or a chat exchange with Bailey replying to a member."
             aspectClassName="aspect-[16/10]"
           />
         </Reveal>

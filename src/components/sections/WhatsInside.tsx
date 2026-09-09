@@ -8,11 +8,11 @@ const BULLET_TONES = ["bg-accent", "bg-accent-2", "bg-accent-3"] as const;
 const BULLET_TEXT = ["text-white", "text-ink", "text-white"] as const;
 
 const INCLUDES = [
-  "100+ of Bailey's personal recipes — the exact ones Bailey actually cooks, written out step by step",
-  "New recipes added regularly, so the collection keeps growing after you join",
-  "Simple, no-jargon instructions anyone can follow, whether you've never cooked or you cook every night",
-  "A private community feed to post what you made, ask questions, and swap notes with other members",
-  "Weekly live access to chat with Bailey directly — bring a recipe question, a substitution, or just ask what to cook tonight",
+  "Weekly live access to chat with Bailey directly — about anything, no set topic. Ask a recipe question if you've got one",
+  "100+ of Bailey's personal recipes — the exact ones she actually cooks, written out step by step",
+  "A private community feed to post, hang out, and swap notes with other members",
+  "Real replies from Bailey, not a bot or a template",
+  "New recipes and content added regularly, so it keeps growing after you join",
 ];
 
 export default function WhatsInside() {
@@ -22,8 +22,8 @@ export default function WhatsInside() {
         <Reveal>
           <SectionHeading
             eyebrow="What You Get"
-            title="Everything Inside The Club"
-            subtitle="One payment. Recipes, community, and Bailey — all in one place."
+            title="Everything You Get"
+            subtitle="Weekly access to Bailey, plus her recipes — all in one place."
           />
         </Reveal>
 
@@ -46,7 +46,7 @@ export default function WhatsInside() {
 
         <Reveal className="w-full" delayMs={180}>
           <CtaButton
-            label="JOIN THE CLUB — $10"
+            label="JOIN THE CIRCLE — $5/mo"
             subtext="Everything above, unlocked today."
             tone="purple"
           />

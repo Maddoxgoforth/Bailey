@@ -9,8 +9,8 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <WhatsInside />
       <Community />
+      <WhatsInside />
       <About />
       <Pricing />
       <Footer />

@@ -21,23 +21,23 @@ export default function About() {
 
         <Reveal delayMs={80} className="flex flex-col items-center gap-3">
           <p className="text-sm font-extrabold tracking-widest text-accent-3 uppercase">
-            Why Listen To Bailey
+            Why People Join
           </p>
           <h2 className="font-display text-3xl font-bold sm:text-4xl">
             MEET <Highlight tone="yellow">BAILEY</Highlight>
           </h2>
           <p className="max-w-md text-muted">
-            Bailey has spent years building a recipe box that&apos;s simple
-            enough for a weeknight and good enough to actually impress
-            people. The Recipe Club is that box, plus a direct line to
-            Bailey every week to help you actually use it.
+            You already know Bailey from her content. The Inner Circle is
+            how you actually talk to her — a real weekly conversation, not
+            just a comment she&apos;ll never see. She&apos;ll also hand
+            over the 100+ recipes people ask about the most.
           </p>
         </Reveal>
 
         <Reveal delayMs={160} className="w-full">
           <CtaButton
-            label="LEARN DIRECTLY FROM BAILEY — $10"
-            subtext="Get the recipes, and the person behind them."
+            label="GET ACCESS TO BAILEY — $5/mo"
+            subtext="Weekly chat, plus the recipes everyone asks for."
           />
         </Reveal>
       </Container>

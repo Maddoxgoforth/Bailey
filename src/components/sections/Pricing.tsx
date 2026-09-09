@@ -9,10 +9,10 @@ const CHECK_TONES = ["bg-accent", "bg-accent-2", "bg-accent-3"] as const;
 const CHECK_TEXT = ["text-white", "text-ink", "text-white"] as const;
 
 const RECAP = [
+  "Weekly live access to chat with Bailey, one-on-one, about anything",
   "100+ of Bailey's personal recipes",
-  "New recipes added regularly",
-  "A private community of fellow home cooks",
-  "Weekly live access to chat with Bailey, one-on-one",
+  "A private community feed with other members",
+  "Real replies from Bailey, not a bot or a template",
 ];
 
 export default function Pricing() {
@@ -24,7 +24,8 @@ export default function Pricing() {
             eyebrow="Get Started"
             title={
               <>
-                Everything Above, For <Highlight tone="pink">$10</Highlight>
+                Everything Above, For{" "}
+                <Highlight tone="pink">$5/mo</Highlight>
               </>
             }
             subtitle="Less than a coffee. Way more useful than one."
@@ -52,17 +53,14 @@ export default function Pricing() {
           delayMs={180}
           className="animate-pop-bounce flex flex-col items-center gap-1"
         >
-          <p className="font-display text-4xl font-bold text-accent">$10</p>
-          <p className="text-sm text-muted">
-            One-time payment. Instant access.
+          <p className="font-display text-4xl font-bold text-accent">
+            $5<span className="text-2xl text-muted">/mo</span>
           </p>
+          <p className="text-sm text-muted">Billed monthly. Cancel anytime.</p>
         </Reveal>
 
         <Reveal className="w-full" delayMs={240}>
-          <CheckoutSlot
-            label="Checkout — Whop"
-            spec="Real Whop checkout embed goes here once the $10 product exists on Whop. Needs the Whop checkout/embed URL for that product."
-          />
+          <CheckoutSlot planId="plan_mInFwVvJc1Goy" />
         </Reveal>
       </Container>
     </section>

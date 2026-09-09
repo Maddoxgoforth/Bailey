@@ -1,8 +1,9 @@
-# Bailey's Recipe Club
+# Bailey's Inner Circle
 
-A single-page landing site for Bailey's $10 recipe offer: 100+ of Bailey's
-personal recipes plus weekly, direct access to chat with Bailey. Built with
-Next.js (App Router), React, TypeScript, and Tailwind CSS v4.
+A single-page landing site for Bailey's $5/month offer: weekly, direct
+access to chat with Bailey about anything, plus 100+ of her personal
+recipes. Built with Next.js (App Router), React, TypeScript, and
+Tailwind CSS v4.
 
 ## Everything is a placeholder right now
 
@@ -14,8 +15,10 @@ labeled placeholder with the exact spec of what's needed:
   is hosted somewhere (Wistia, YouTube, Loom, etc.).
 - **`ImageSlot`** — stands in for a headshot or community screenshot. Pass
   `src` (a path under `public/images/`) once the file exists.
-- **`CheckoutSlot`** — stands in for the Whop checkout widget. Pass
-  `embedUrl` once the $10 product exists on Whop.
+- **`CheckoutSlot`** — renders the real Whop checkout once given a
+  `planId` (the `$5/mo` plan is already wired up in `Pricing.tsx`); an
+  `embedUrl` (plain iframe) or the placeholder box remain as fallbacks for
+  other setups.
 
 Swapping a placeholder for the real thing is a one-line prop change at the
 call site in the relevant section component (`src/components/sections/`).
@@ -38,5 +41,5 @@ src/app/
   page.tsx       # the landing page: one section per component, in order
 src/components/
   ui/            # generic primitives, including the placeholder "slot" components
-  sections/      # one file per page section (Hero, WhatsInside, Community, About, Pricing, Footer)
+  sections/      # one file per page section (Hero, Community, WhatsInside, About, Pricing, Footer)
 ```
