@@ -1,4 +1,4 @@
-# Bailey's Inner Circle
+# Bailey's Landing Page
 
 A single-page landing site for Bailey's $5/month offer: weekly, direct
 access to chat with Bailey about anything, plus 100+ of her personal

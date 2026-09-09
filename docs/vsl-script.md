@@ -1,4 +1,4 @@
-# VSL Script — Bailey's Inner Circle
+# VSL Script — Hero Video
 
 For the `VideoSlot` in `src/components/sections/Hero.tsx`. Written to run
 ~2:15 at a natural pace (under the 3-minute target with room to spare).
@@ -24,11 +24,10 @@ audience actually wants: weekly personal access to her, and her recipes.
 
 **[0:28–1:00] — THE OFFER: WEEKLY ACCESS (lead benefit)**
 
-> It's called Bailey's Inner Circle. Every single week, I hop on live
-> inside the community and we just talk. Not a script, not a set topic —
-> whatever's going on with you, what I'm up to, life, whatever. And yeah,
-> if you've got a recipe question, ask me that too. It's a real
-> conversation, not a comment I'll never see.
+> Every single week, I hop on live inside the community and we just talk.
+> Not a script, not a set topic — whatever's going on with you, what I'm
+> up to, life, whatever. And yeah, if you've got a recipe question, ask me
+> that too. It's a real conversation, not a comment I'll never see.
 
 **[1:00–1:30] — THE SECOND BENEFIT: THE RECIPES**
 
@@ -52,7 +51,7 @@ audience actually wants: weekly personal access to her, and her recipes.
 
 > So if you've ever wanted to actually be in my world instead of just
 > watching it from the outside — this is it. Hit the button below and
-> join the Inner Circle. I'll see you in there this week.
+> join now. I'll see you in there this week.
 
 ---
 

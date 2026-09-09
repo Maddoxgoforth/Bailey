@@ -39,7 +39,7 @@ export default function Hero() {
       <Container className="relative flex flex-col items-center gap-6 text-center">
         <Reveal>
           <p className="font-display text-xl font-bold tracking-[0.2em] text-accent-dim">
-            BAILEY&apos;S INNER CIRCLE
+            BAILEY
           </p>
         </Reveal>
 
@@ -65,7 +65,7 @@ export default function Hero() {
 
         <Reveal delayMs={260} className="w-full">
           <VideoSlot
-            label="VSL — Bailey's Inner Circle"
+            label="VSL — Hero Video"
             spec="60–120 sec video: who Bailey is, what's inside (weekly live chat access + 100+ recipes), and why it's $5/month. Landscape 16:9. Not yet recorded."
           />
         </Reveal>

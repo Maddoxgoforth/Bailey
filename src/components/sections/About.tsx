@@ -27,10 +27,10 @@ export default function About() {
             MEET <Highlight tone="yellow">BAILEY</Highlight>
           </h2>
           <p className="max-w-md text-muted">
-            You already know Bailey from her content. The Inner Circle is
-            how you actually talk to her — a real weekly conversation, not
-            just a comment she&apos;ll never see. She&apos;ll also hand
-            over the 100+ recipes people ask about the most.
+            You already know Bailey from her content. This is how you
+            actually talk to her — a real weekly conversation, not just a
+            comment she&apos;ll never see. She&apos;ll also hand over the
+            100+ recipes people ask about the most.
           </p>
         </Reveal>
 
