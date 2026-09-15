@@ -1,22 +1,56 @@
+import { createElement } from "react";
+import Script from "next/script";
+
 /**
- * Stands in for the real VSL until one exists. Pass `embedUrl` (a Wistia,
- * YouTube, or Loom embed URL) once the real video is hosted, and this
- * renders it instead of the placeholder — no other call sites need to change.
- * Pass `vertical` for a TikTok/Reels-style 9:16 video instead of landscape.
+ * Stands in for the real VSL until one exists. Pass `wistiaMediaId` (or a
+ * generic `embedUrl` for a Wistia/YouTube/Loom iframe URL) once the real
+ * video is hosted, and this renders it instead of the placeholder — no
+ * other call sites need to change. Pass `vertical` for a TikTok/Reels-style
+ * 9:16 video instead of landscape.
  */
 export default function VideoSlot({
   label,
   spec,
   embedUrl,
+  wistiaMediaId,
   vertical = false,
 }: {
   label: string;
   spec: string;
   embedUrl?: string;
+  wistiaMediaId?: string;
   vertical?: boolean;
 }) {
+  const aspectRatio = vertical ? 9 / 16 : 16 / 9;
   const aspectClass = vertical ? "aspect-[9/16]" : "aspect-video";
   const sizeClass = vertical ? "mx-auto w-full max-w-[380px]" : "w-full";
+
+  if (wistiaMediaId) {
+    const placeholderPaddingTop = ((1 / aspectRatio) * 100).toFixed(2);
+    return (
+      <div
+        className={`${sizeClass} overflow-hidden rounded-2xl border-[3px] border-ink shadow-pop`}
+      >
+        <Script src="https://fast.wistia.com/player.js" strategy="afterInteractive" />
+        <Script
+          src={`https://fast.wistia.com/embed/${wistiaMediaId}.js`}
+          strategy="afterInteractive"
+          type="module"
+        />
+        <style
+          // Blurred swatch placeholder shown until the wistia-player
+          // custom element finishes defining itself.
+          dangerouslySetInnerHTML={{
+            __html: `wistia-player[media-id='${wistiaMediaId}']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/${wistiaMediaId}/swatch'); display: block; filter: blur(5px); padding-top:${placeholderPaddingTop}%; }`,
+          }}
+        />
+        {createElement("wistia-player", {
+          "media-id": wistiaMediaId,
+          aspect: String(aspectRatio),
+        })}
+      </div>
+    );
+  }
 
   if (embedUrl) {
     return (

@@ -67,6 +67,7 @@ export default function Hero() {
           <VideoSlot
             label="VSL — Hero Video"
             spec="60–120 sec video: who Bailey is, what's inside (weekly live chat access + 100+ recipes), and why it's $5/month. Vertical 9:16 (TikTok format). Not yet recorded."
+            wistiaMediaId="0axkiomlve"
             vertical
           />
         </Reveal>
