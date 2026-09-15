@@ -1,8 +1,8 @@
 # VSL Script — Hero Video
 
 For the `VideoSlot` in `src/components/sections/Hero.tsx`. Written to run
-~2:30 at a natural pace (safely under the 3-minute target). Landscape
-16:9, Bailey talking straight to camera.
+~2:30 at a natural pace (safely under the 3-minute target). Vertical 9:16
+(TikTok/Reels format), Bailey talking straight to camera.
 
 Broad hook first (works on anyone who's ever wanted access to a creator
 they follow), narrows to Bailey specifically, sells the two things her

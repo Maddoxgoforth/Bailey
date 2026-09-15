@@ -66,7 +66,8 @@ export default function Hero() {
         <Reveal delayMs={260} className="w-full">
           <VideoSlot
             label="VSL — Hero Video"
-            spec="60–120 sec video: who Bailey is, what's inside (weekly live chat access + 100+ recipes), and why it's $5/month. Landscape 16:9. Not yet recorded."
+            spec="60–120 sec video: who Bailey is, what's inside (weekly live chat access + 100+ recipes), and why it's $5/month. Vertical 9:16 (TikTok format). Not yet recorded."
+            vertical
           />
         </Reveal>
 
