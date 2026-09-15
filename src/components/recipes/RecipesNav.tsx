@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Container from "@/components/ui/Container";
-import { WHOP_CHECKOUT_URL } from "@/lib/checkout";
 
 export default function RecipesNav() {
   return (
@@ -16,14 +15,12 @@ export default function RecipesNav() {
           <Link href="/recipes" className="hover:text-accent">
             All Recipes
           </Link>
-          <a
-            href={WHOP_CHECKOUT_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/#checkout"
             className="rounded-full border-[3px] border-ink bg-accent px-4 py-1.5 text-xs font-extrabold text-white shadow-pop-sm transition-transform hover:-translate-y-0.5"
           >
             GET ACCESS — $5/mo
-          </a>
+          </Link>
         </nav>
       </Container>
     </header>

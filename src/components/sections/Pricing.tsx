@@ -1,7 +1,7 @@
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Card from "@/components/ui/Card";
-import CtaButton from "@/components/ui/CtaButton";
+import CheckoutSlot from "@/components/ui/CheckoutSlot";
 import Highlight from "@/components/ui/Highlight";
 import Reveal from "@/components/ui/Reveal";
 
@@ -60,10 +60,7 @@ export default function Pricing() {
         </Reveal>
 
         <Reveal className="w-full" delayMs={240}>
-          <CtaButton
-            label="GET INSTANT ACCESS — $5/mo"
-            subtext="Weekly access to Bailey + 100+ recipes"
-          />
+          <CheckoutSlot planId="plan_mInFwVvJc1Goy" />
         </Reveal>
       </Container>
     </section>
