@@ -1,6 +1,6 @@
 import Link from "next/link";
-import type { Recipe } from "@/lib/recipes";
-import { CATEGORY_EMOJI, toneForCategory } from "@/lib/categoryMeta";
+import { getRecipeImagePath, type Recipe } from "@/lib/recipes";
+import { toneForCategory } from "@/lib/categoryMeta";
 
 const TONE_BORDER = {
   pink: "hover:border-accent",
@@ -26,31 +26,34 @@ export default function RecipeCard({
   return (
     <Link
       href={`/recipes/${recipe.slug}`}
-      className={`group flex flex-col gap-3 rounded-2xl border-[3px] border-ink bg-background-elevated p-5 shadow-pop transition-all duration-200 hover:-translate-y-1 hover:shadow-pop-lg ${TONE_BORDER[tone]}`}
+      className={`group flex flex-col overflow-hidden rounded-2xl border-[3px] border-ink bg-background-elevated shadow-pop transition-all duration-200 hover:-translate-y-1 hover:shadow-pop-lg ${TONE_BORDER[tone]}`}
     >
-      <div className="flex items-start justify-between gap-2">
+      <div className="aspect-[4/3] w-full overflow-hidden border-b-[3px] border-ink">
+        {/* eslint-disable-next-line @next/next/no-img-element -- static generated SVG, not a photo Next needs to optimize */}
+        <img
+          src={getRecipeImagePath(recipe)}
+          alt={recipe.title}
+          className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+        />
+      </div>
+
+      <div className="flex flex-1 flex-col gap-3 p-5">
         <span
-          aria-hidden
-          className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border-[3px] border-ink bg-background text-xl transition-transform duration-200 group-hover:scale-110"
-        >
-          {CATEGORY_EMOJI[recipe.category] ?? "🍽️"}
-        </span>
-        <span
-          className={`text-right text-[11px] leading-tight font-extrabold tracking-wide uppercase ${TONE_TEXT[tone]}`}
+          className={`text-[11px] leading-tight font-extrabold tracking-wide uppercase ${TONE_TEXT[tone]}`}
         >
           {recipe.category}
         </span>
-      </div>
 
-      <h3 className="font-display text-lg leading-tight font-bold text-foreground">
-        {recipe.title}
-      </h3>
+        <h3 className="font-display text-lg leading-tight font-bold text-foreground">
+          {recipe.title}
+        </h3>
 
-      <p className="line-clamp-2 flex-1 text-sm text-muted">{recipe.blurb}</p>
+        <p className="line-clamp-2 flex-1 text-sm text-muted">{recipe.blurb}</p>
 
-      <div className="flex items-center gap-3 border-t border-border pt-3 text-xs font-bold text-muted">
-        <span>⏱ {recipe.prepTime.split(" ").slice(0, 2).join(" ")} prep</span>
-        <span>🔥 {recipe.cookTime.split(" ").slice(0, 2).join(" ")} cook</span>
+        <div className="flex items-center gap-3 border-t border-border pt-3 text-xs font-bold text-muted">
+          <span>⏱ {recipe.prepTime.split(" ").slice(0, 2).join(" ")} prep</span>
+          <span>🔥 {recipe.cookTime.split(" ").slice(0, 2).join(" ")} cook</span>
+        </div>
       </div>
     </Link>
   );

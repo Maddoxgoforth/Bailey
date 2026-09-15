@@ -45,3 +45,13 @@ export function getRelatedRecipes(recipe: Recipe, count = 3): Recipe[] {
     (r) => r.category === recipe.category && r.slug !== recipe.slug,
   ).slice(0, count);
 }
+
+/**
+ * Every recipe has a generated illustration at this path (see
+ * public/images/recipes/) — a colorful icon standing in for a real photo
+ * of the finished dish. Swapping in real photography later is a one-line
+ * change here.
+ */
+export function getRecipeImagePath(recipe: Recipe): string {
+  return `/images/recipes/${recipe.slug}.svg`;
+}

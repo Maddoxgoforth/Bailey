@@ -12,6 +12,7 @@ import {
   getAllSlugs,
   getCategories,
   getRecipeBySlug,
+  getRecipeImagePath,
   getRelatedRecipes,
 } from "@/lib/recipes";
 
@@ -59,6 +60,15 @@ export default async function RecipeDetailPage({
 
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.1fr_1.4fr]">
             <div className="flex flex-col gap-5">
+              <div className="aspect-[4/3] w-full overflow-hidden rounded-2xl border-[3px] border-ink shadow-pop">
+                {/* eslint-disable-next-line @next/next/no-img-element -- static generated SVG, not a photo Next needs to optimize */}
+                <img
+                  src={getRecipeImagePath(recipe)}
+                  alt={recipe.title}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+
               <span className="inline-flex w-fit items-center gap-2 rounded-full border-[3px] border-ink bg-background-elevated px-3 py-1 text-xs font-extrabold tracking-wide text-accent-3 uppercase">
                 {CATEGORY_EMOJI[recipe.category] ?? "🍽️"} {recipe.category}
               </span>
