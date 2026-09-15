@@ -17,17 +17,15 @@ const TONE_TEXT = {
 export default function RecipeCard({
   recipe,
   categories,
-  basePath = "/recipes",
 }: {
   recipe: Recipe;
   categories: string[];
-  basePath?: string;
 }) {
   const tone = toneForCategory(recipe.category, categories);
 
   return (
     <Link
-      href={`${basePath}/${recipe.slug}`}
+      href={`/recipes/${recipe.slug}`}
       className={`group flex flex-col gap-3 rounded-2xl border-[3px] border-ink bg-background-elevated p-5 shadow-pop transition-all duration-200 hover:-translate-y-1 hover:shadow-pop-lg ${TONE_BORDER[tone]}`}
     >
       <div className="flex items-start justify-between gap-2">

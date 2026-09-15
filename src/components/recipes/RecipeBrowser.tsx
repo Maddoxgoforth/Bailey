@@ -10,11 +10,9 @@ const ALL = "All Recipes";
 export default function RecipeBrowser({
   recipes,
   categories,
-  basePath = "/recipes",
 }: {
   recipes: Recipe[];
   categories: string[];
-  basePath?: string;
 }) {
   const [query, setQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState(ALL);
@@ -100,12 +98,7 @@ export default function RecipeBrowser({
       {filtered.length > 0 ? (
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {filtered.map((recipe) => (
-            <RecipeCard
-              key={recipe.slug}
-              recipe={recipe}
-              categories={categories}
-              basePath={basePath}
-            />
+            <RecipeCard key={recipe.slug} recipe={recipe} categories={categories} />
           ))}
         </div>
       ) : (

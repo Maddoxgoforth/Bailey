@@ -14,8 +14,6 @@ import {
   getRecipeBySlug,
   getRelatedRecipes,
 } from "@/lib/recipes";
-import { getRecipesBasePath } from "@/lib/recipesBasePath";
-import { withMainSite } from "@/lib/siteConfig";
 
 export function generateStaticParams() {
   return getAllSlugs().map((slug) => ({ slug }));
@@ -46,15 +44,14 @@ export default async function RecipeDetailPage({
 
   const categories = getCategories();
   const related = getRelatedRecipes(recipe, 3);
-  const basePath = await getRecipesBasePath();
 
   return (
     <>
-      <RecipesNav basePath={basePath} />
+      <RecipesNav />
       <main>
         <Container size="wide" className="flex flex-col gap-8 py-10">
           <Link
-            href={basePath || "/"}
+            href="/recipes"
             className="inline-flex w-fit items-center gap-1 text-sm font-bold text-accent-3 hover:underline"
           >
             ← All Recipes
@@ -141,7 +138,7 @@ export default async function RecipeDetailPage({
                 <CtaButton
                   label="CHAT WITH BAILEY ABOUT THIS — $5/mo"
                   subtext="Weekly access to Bailey + 100+ recipes"
-                  href={withMainSite("/#checkout")}
+                  href="/#checkout"
                 />
               </div>
             </div>
@@ -154,12 +151,7 @@ export default async function RecipeDetailPage({
               </p>
               <div className="grid grid-cols-1 gap-5 sm:grid-cols-3">
                 {related.map((r) => (
-                  <RecipeCard
-                    key={r.slug}
-                    recipe={r}
-                    categories={categories}
-                    basePath={basePath}
-                  />
+                  <RecipeCard key={r.slug} recipe={r} categories={categories} />
                 ))}
               </div>
             </div>
