@@ -19,7 +19,7 @@ export default function RecipesNav() {
             href="/#checkout"
             className="rounded-full border-[3px] border-ink bg-accent px-4 py-1.5 text-xs font-extrabold text-white shadow-pop-sm transition-transform hover:-translate-y-0.5"
           >
-            GET ACCESS — $5/mo
+            GET ACCESS — $5
           </Link>
         </nav>
       </Container>

@@ -16,7 +16,7 @@ const fredoka = Fredoka({
 export const metadata: Metadata = {
   title: "Weekly Access To Bailey + 100+ Recipes",
   description:
-    "Chat with Bailey directly, every week, about anything — plus get 100+ of her personal recipes. All for $5/month.",
+    "Chat with Bailey directly, every week, about anything — plus get 100+ of her personal recipes. All for $5.",
 };
 
 export default function RootLayout({

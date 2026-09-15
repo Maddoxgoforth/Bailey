@@ -146,7 +146,7 @@ export default async function RecipeDetailPage({
 
               <div className="pt-2">
                 <CtaButton
-                  label="CHAT WITH BAILEY ABOUT THIS — $5/mo"
+                  label="CHAT WITH BAILEY ABOUT THIS — $5"
                   subtext="Weekly access to Bailey + 100+ recipes"
                   href="/#checkout"
                 />

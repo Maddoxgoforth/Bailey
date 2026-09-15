@@ -25,7 +25,7 @@ export default function Pricing() {
             title={
               <>
                 Everything Above, For{" "}
-                <Highlight tone="pink">$5/mo</Highlight>
+                <Highlight tone="pink">$5</Highlight>
               </>
             }
             subtitle="Less than a coffee. Way more useful than one."
@@ -53,9 +53,7 @@ export default function Pricing() {
           delayMs={180}
           className="animate-pop-bounce flex flex-col items-center gap-1"
         >
-          <p className="font-display text-4xl font-bold text-accent">
-            $5<span className="text-2xl text-muted">/mo</span>
-          </p>
+          <p className="font-display text-4xl font-bold text-accent">$5</p>
           <p className="text-sm text-muted">Billed monthly. Cancel anytime.</p>
         </Reveal>
 

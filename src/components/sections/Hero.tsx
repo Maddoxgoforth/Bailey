@@ -65,14 +65,14 @@ export default function Hero() {
 
         <Reveal delayMs={260} className="flex flex-col items-center gap-2">
           <p className="font-display animate-pop-bounce text-4xl font-bold text-accent">
-            $5<span className="text-2xl text-muted">/mo</span>
+            $5
           </p>
           <p className="text-sm text-muted">Billed monthly. Cancel anytime.</p>
         </Reveal>
 
         <Reveal delayMs={320} className="w-full">
           <CtaButton
-            label="GET INSTANT ACCESS — $5/mo"
+            label="GET INSTANT ACCESS — $5"
             subtext="Weekly access to Bailey + 100+ recipes"
           />
         </Reveal>
