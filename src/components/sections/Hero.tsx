@@ -54,16 +54,7 @@ export default function Hero() {
           </h1>
         </Reveal>
 
-        <Reveal delayMs={200}>
-          <p className="max-w-md text-lg text-muted">
-            Chat with Bailey directly, every single week — about anything
-            you want. Ask a recipe question if you feel like it, or just
-            talk. Plus you get 100+ of her personal recipes to keep either
-            way. All for $5/month.
-          </p>
-        </Reveal>
-
-        <Reveal delayMs={260} className="w-full">
+        <Reveal delayMs={200} className="w-full">
           <VideoSlot
             label="VSL — Hero Video"
             spec="60–120 sec video: who Bailey is, what's inside (weekly live chat access + 100+ recipes), and why it's $5/month. Vertical 9:16 (TikTok format). Not yet recorded."
@@ -72,14 +63,14 @@ export default function Hero() {
           />
         </Reveal>
 
-        <Reveal delayMs={320} className="flex flex-col items-center gap-2">
+        <Reveal delayMs={260} className="flex flex-col items-center gap-2">
           <p className="font-display animate-pop-bounce text-4xl font-bold text-accent">
             $5<span className="text-2xl text-muted">/mo</span>
           </p>
           <p className="text-sm text-muted">Billed monthly. Cancel anytime.</p>
         </Reveal>
 
-        <Reveal delayMs={380} className="w-full">
+        <Reveal delayMs={320} className="w-full">
           <CtaButton
             label="GET INSTANT ACCESS — $5/mo"
             subtext="Weekly access to Bailey + 100+ recipes"
