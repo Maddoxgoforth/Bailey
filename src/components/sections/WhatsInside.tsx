@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Container from "@/components/ui/Container";
 import Card from "@/components/ui/Card";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -42,6 +43,15 @@ export default function WhatsInside() {
               ))}
             </ul>
           </Card>
+        </Reveal>
+
+        <Reveal delayMs={140}>
+          <Link
+            href="/recipes"
+            className="inline-flex items-center gap-2 rounded-full border-[3px] border-ink bg-background-elevated px-5 py-2 text-sm font-bold text-accent-3 shadow-pop-sm transition-transform hover:-translate-y-0.5"
+          >
+            👀 Peek At All 100 Recipes, Free
+          </Link>
         </Reveal>
 
         <Reveal className="w-full" delayMs={180}>
