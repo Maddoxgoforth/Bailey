@@ -1,3 +1,5 @@
+import { WHOP_CHECKOUT_URL } from "@/lib/checkout";
+
 const TONES = {
   pink: "bg-accent hover:bg-accent-dim",
   yellow: "bg-accent-2 hover:bg-accent-2-dim",
@@ -13,7 +15,7 @@ const TEXT_TONES = {
 export default function CtaButton({
   label = "GET INSTANT ACCESS",
   subtext = "100+ recipes + weekly access to Bailey",
-  href = "#checkout",
+  href = WHOP_CHECKOUT_URL,
   tone = "pink",
 }: {
   label?: string;
@@ -25,6 +27,8 @@ export default function CtaButton({
     <div className="flex flex-col items-center gap-4">
       <a
         href={href}
+        target="_blank"
+        rel="noopener noreferrer"
         className={`group relative flex w-full -rotate-1 items-center justify-center gap-3 rounded-2xl border-[3px] border-ink px-8 py-5 text-center shadow-pop transition-all duration-150 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:rotate-0 hover:shadow-pop-lg active:translate-x-1 active:translate-y-1 active:shadow-none ${TONES[tone]}`}
       >
         <span
