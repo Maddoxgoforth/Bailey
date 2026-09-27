@@ -43,6 +43,8 @@ export default function Community() {
           <ImageSlot
             label="Community / Chat Screenshot"
             spec="Screenshot of the Whop community feed or a chat exchange with Bailey replying to a member."
+            src="/images/community/discord-chat.webp"
+            alt="Members chatting in the Bailey Beef Steak community"
             aspectClassName="aspect-[16/10]"
           />
         </Reveal>
