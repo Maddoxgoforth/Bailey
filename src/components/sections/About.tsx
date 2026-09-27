@@ -13,6 +13,8 @@ export default function About() {
             <ImageSlot
               label="Bailey Headshot"
               spec="Square headshot of Bailey, cropped tight, no background clutter."
+              src="/images/bailey-headshot.jpg"
+              alt="Bailey"
               aspectClassName="aspect-square"
               shape="circle"
             />
