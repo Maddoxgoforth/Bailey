@@ -11,6 +11,10 @@ export const metadata: Metadata = {
   title: "100 Recipes — Bailey's Recipe Box",
   description:
     "Browse all 100 of Bailey's personal recipes — search by name, ingredient, or category, then get the full step-by-step for any of them.",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function RecipesIndexPage() {

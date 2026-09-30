@@ -31,6 +31,10 @@ export async function generateMetadata({
   return {
     title: `${recipe.title} — Bailey's Recipe Box`,
     description: recipe.blurb,
+    robots: {
+      index: false,
+      follow: false,
+    },
   };
 }
 
