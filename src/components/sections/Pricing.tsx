@@ -58,7 +58,7 @@ export default function Pricing() {
         </Reveal>
 
         <Reveal className="w-full" delayMs={240}>
-          <CheckoutSlot planId="plan_mInFwVvJc1Goy" />
+          <CheckoutSlot planId="plan_MgxfvdYiT8rCk" />
         </Reveal>
       </Container>
     </section>
