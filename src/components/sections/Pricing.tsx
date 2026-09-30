@@ -25,7 +25,7 @@ export default function Pricing() {
             title={
               <>
                 Everything Above, For{" "}
-                <Highlight tone="pink">$10</Highlight>
+                <Highlight tone="pink">$5</Highlight>
               </>
             }
             subtitle="Less than a coffee. Way more useful than one."
@@ -53,12 +53,12 @@ export default function Pricing() {
           delayMs={180}
           className="animate-pop-bounce flex flex-col items-center gap-1"
         >
-          <p className="font-display text-4xl font-bold text-accent">$10</p>
+          <p className="font-display text-4xl font-bold text-accent">$5</p>
           <p className="text-sm text-muted">Billed monthly. Cancel anytime.</p>
         </Reveal>
 
         <Reveal className="w-full" delayMs={240}>
-          <CheckoutSlot planId="plan_MgxfvdYiT8rCk" />
+          <CheckoutSlot planId="plan_mInFwVvJc1Goy" />
         </Reveal>
       </Container>
     </section>

@@ -57,22 +57,22 @@ export default function Hero() {
         <Reveal delayMs={200} className="w-full">
           <VideoSlot
             label="VSL — Hero Video"
-            spec="60–120 sec video: who Bailey is, what's inside (weekly live chat access + 100+ recipes), and why it's $10/month. Vertical 9:16 (TikTok format). Not yet recorded."
-            wistiaMediaId="77lxmyfr29"
+            spec="60–120 sec video: who Bailey is, what's inside (weekly live chat access + 100+ recipes), and why it's $5/month. Vertical 9:16 (TikTok format). Not yet recorded."
+            wistiaMediaId="0axkiomlve"
             vertical
           />
         </Reveal>
 
         <Reveal delayMs={260} className="flex flex-col items-center gap-2">
           <p className="font-display animate-pop-bounce text-4xl font-bold text-accent">
-            $10
+            $5
           </p>
           <p className="text-sm text-muted">Billed monthly. Cancel anytime.</p>
         </Reveal>
 
         <Reveal delayMs={320} className="w-full">
           <CtaButton
-            label="GET INSTANT ACCESS — $10"
+            label="GET INSTANT ACCESS — $5"
             subtext="Weekly access to Bailey + 100+ recipes"
           />
         </Reveal>

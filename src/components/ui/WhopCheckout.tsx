@@ -40,7 +40,7 @@ export default function WhopCheckout({ planId }: { planId: string }) {
     <>
       <div id="whop-checkout" />
       <Script
-        src="https://cdn.whop.com/elements/amber/elements.js"
+        src="https://js.whop.cloud/elements/amber/elements.js"
         data-whop-elements=""
         strategy="afterInteractive"
         onReady={mount}
